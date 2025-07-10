@@ -1,23 +1,13 @@
-import React from 'react';
-import './App.css';
-import Nav from './layouts/Nav';
-import Footer from './layouts/Footer';
-import RouterConfig from './router/RouterConfig';
-import { BrowserRouter } from 'react-router-dom';
+import "./App.css";
 
-function App() {
-  
+import RouterConfig from "./router/RouterConfig";
+
+const App: React.FC = () => {
   return (
-    
-      <div className="App">
-        <Nav />
-        <main>
-          <RouterConfig />
-        </main>
-        <Footer />
-      </div>
-    
+    <div className="App">
+      <RouterConfig />
+    </div>
   );
-}
+};
 
 export default App;

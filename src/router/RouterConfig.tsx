@@ -1,13 +1,34 @@
-import React from 'react';
-import { Routes, Route, createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import PagoPage from '../pages/pago/PagoPage';
+import Login from '../components/Auth/Login/Login';
+import Register from '../components/Auth/Register/Register';
+import Home from '../components/Home/Home';
 
 
 const routes = [
  {
-   path: "/",
+   path: "/pagoreserva",
    element: <PagoPage/>,
+   
  },
+ {
+  path: "/",
+  element: <Login/>,
+ },
+
+  {
+  path: "/login",
+  element: <Login/>,
+ },
+  {
+  path: "/register",
+  element: <Register/>,
+ },
+  {
+  path: "/home",
+  element: <Home/>,
+ }
+
  /*{
    path: "/pago",
    element: <PagoPage/>,
