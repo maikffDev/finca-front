@@ -1,22 +1,23 @@
-import { useEffect, useState } from "react";
-import { api } from "./api";
-import NavBar from "./layouts/Nav";
+import React from 'react';
+import './App.css';
+import Nav from './layouts/Nav';
+import Footer from './layouts/Footer';
+import RouterConfig from './router/RouterConfig';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
-  const [data, setData] = useState<any[]>([]);
-
-  useEffect(() => {
-    api.get("/api/finca") //
-      .then((res) => setData(res.data))
-      .catch((err) => console.error(err));
-  }, []);
-
+  // App.tsx ahora es solo el contenedor principal.
+  // La lógica de las páginas está en sus propios componentes.
   return (
-    <div>
-      <NavBar />
-      <h1>Datos desde Spring Boot</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
+    
+      <div className="App">
+        <Nav />
+        <main>
+          <RouterConfig />
+        </main>
+        <Footer />
+      </div>
+    
   );
 }
 

@@ -5,7 +5,7 @@ import styles from "./Nav.module.css";
 const Navbar: React.FC = () => {
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>Logo</div>
+      <div className={styles.logo}>G&L</div>
       <div className={styles.actions}>
         <Button label="Registrarse" className="registrarse" />
         <Button label="Iniciar sesión" className="iniciarSesion" />
