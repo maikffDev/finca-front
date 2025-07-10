@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { api } from "./api";
 import NavBar from "./layouts/Nav";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import FincaDetalle from "./pages/detalles/detail";
 
 function App() {
   const [data, setData] = useState<any[]>([]);
@@ -12,11 +14,12 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <NavBar />
-      <h1>Datos desde Spring Boot</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<FincaDetalle />} />
+        {/* Otras rutas aquí */}
+      </Routes>
+    </Router>
   );
 }
 

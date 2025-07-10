@@ -1,0 +1,36 @@
+:root{
+    margin: 0 5rem;
+    padding: 2rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.containerInfo {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  border-radius: 0.75rem;
+
+}
+.contenedorInfo{
+    width: 40%;
+}
+
+.containerComentarioReserva{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.containerReserva{
+    padding-top:1rem ;
+    width: 30%;
+    height: 30%;
+}
+.containerComentario{
+    width: 70%;
+}
