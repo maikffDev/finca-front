@@ -6,8 +6,7 @@ import RouterConfig from './router/RouterConfig';
 import { BrowserRouter } from 'react-router-dom';
 
 function App() {
-  // App.tsx ahora es solo el contenedor principal.
-  // La lógica de las páginas está en sus propios componentes.
+  
   return (
     
       <div className="App">
