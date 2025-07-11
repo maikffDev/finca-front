@@ -1,5 +1,8 @@
 import { createContext, useContext, useState, ReactNode } from "react";
-import { IUser } from "../type"; 
+import { IUser } from "../types/user";
+
+// TODO : agregar las llamadas a Login y Register con JWT, una vez finalizado el back de esos endpoints
+
 
 interface UserContextType {
   user: IUser;
