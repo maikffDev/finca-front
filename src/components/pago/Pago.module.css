@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 3a92ff8 (Feat: Se añadio la vista de Pago exitoso y demas funcionalidades de Pago)
 .pageContainer {
  
   background-color: #1e3a5f;
@@ -134,3 +137,89 @@
 .botonReservar:hover {
   background-color: #ea580c;
 }
+<<<<<<< HEAD
+=======
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+.modalInput {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.modalButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.ticketContainer {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.ticket {
+    margin-top: 1.5rem;
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.botonReservar {
+  background-color: #f97316;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  align-self: flex-end;
+}
+
+.botonReservar:hover {
+  background-color: #ea580c;
+}
+
+
+.botonReservar:disabled {
+  background-color: #f97316; 
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+>>>>>>> 3a92ff8 (Feat: Se añadio la vista de Pago exitoso y demas funcionalidades de Pago)
