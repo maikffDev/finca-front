@@ -1,5 +1,5 @@
-import {  useState } from "react";
-import "./LoginStyle.css";
+import { useState } from "react";
+import styles from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
@@ -8,51 +8,59 @@ function Login() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    setNombre ("")
-    setContraseña("")
-    navigate ('/home')
-    
+    setNombre("");
+    setContraseña("");
+    navigate("/home");
   };
 
-    const handleRegister = () => {
-    setNombre ("")
-    setContraseña("")
-    navigate ('/register')
-    
+  const handleRegister = () => {
+    setNombre("");
+    setContraseña("");
+    navigate("/register");
   };
-
 
   return (
-    <div className="container-background">
-        <div className="container">
-      <h1 className="title">Iniciar sesión</h1>
+    <div className={styles["container-background"]}>
+      <div className={styles.container}>
+        <div className={styles["logo-container"]}>
+          <div className={styles.logo}>
+            <span className={styles["logo-text"]}>G&L</span>
+            <span className={styles["logo-subtitle"]}>Reservas</span>
+          </div>
+        </div>
 
-      <div className="container-input">
-        <input
-          placeholder="Usuario"
-          className="input"
-          onChange={(e) => setNombre(e.target.value)}
-          value={nombre}
-        />
-        <input
-          type="password"
-          placeholder="Contraseña"
-          className="input"
-          onChange={(e) => setContraseña(e.target.value)}
-          value={contraseña}
-        />
-        <p className="text">¿Olvidaste tu contraseña?</p>
-      </div>
+        <div className={styles["container-input"]}>
+          <input
+            placeholder="email"
+            className={styles.input}
+            onChange={(e) => setNombre(e.target.value)}
+            value={nombre}
+          />
+          <input
+            type="password"
+            placeholder="password"
+            className={styles.input}
+            onChange={(e) => setContraseña(e.target.value)}
+            value={contraseña}
+          />
+        </div>
 
-      <div className="container-button">
-        <button className="button" onClick={handleLogin}>
-          Ingresar
-        </button>
-          <button className="button" onClick={handleRegister}>
-          Registrarse
-        </button>
-        
-      </div>
+        <div className={styles["container-button"]}>
+          <button
+            className={`${styles.button} ${styles["button-primary"]}`}
+            onClick={handleLogin}
+          >
+            Ingresar
+          </button>
+          <button
+            className={`${styles.button} ${styles["button-secondary"]}`}
+            onClick={handleRegister}
+          >
+            Crear cuenta
+          </button>
+        </div>
+
+        <p className={styles["help-text"]}>¿Necesitas Ayuda?</p>
       </div>
     </div>
   );
