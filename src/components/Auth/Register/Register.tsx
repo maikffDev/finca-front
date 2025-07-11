@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./RegisterStyle.css";
+import styles from "./Register.module.css";
 import { useNavigate } from "react-router-dom";
 
 function Register() {
@@ -8,53 +8,59 @@ function Register() {
   const [contraseña, setContraseña] = useState("");
   const navigate = useNavigate();
 
+  const handleLogin = () => {
+    setNombre("");
+    setUsuario("");
+    setContraseña("");
+    navigate("/login");
+  };
 
-
-    const handleLogin = () => {
-    setNombre ("")
-    setContraseña("")
-    navigate ('/login')
-    
+  const handleRegister = () => {
+    // Aquí podrías agregar la lógica de registro real
+    setNombre("");
+    setUsuario("");
+    setContraseña("");
+    alert("Usuario registrado con éxito!");
+    // Luego navegar donde quieras
   };
 
   return (
-    <div className="container-background">
-      <div className="container">
-        <h1 className="title">Registrar Usuario</h1>
+    <div className={styles["container-background"]}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Registrar Usuario</h1>
 
-        <div className="container-input">
+        <div className={styles["container-input"]}>
           <input
             placeholder="Nombre completo"
-            className="input"
+            className={styles.input}
             onChange={(e) => setNombre(e.target.value)}
             value={nombre}
           />
-
           <input
             placeholder="Nombre de usuario"
-            className="input"
+            className={styles.input}
             onChange={(e) => setUsuario(e.target.value)}
             value={usuario}
           />
-
           <input
             type="password"
             placeholder="Contraseña"
-            className="input"
+            className={styles.input}
             onChange={(e) => setContraseña(e.target.value)}
             value={contraseña}
           />
-
-          <p className="text">¿Olvidaste tu contraseña?</p>
         </div>
 
-        <div className="container-button">
-          <button className="button" >
+        <div className={styles["container-button"]}>
+          <button className={styles.button} onClick={handleRegister}>
             Registrarse
           </button>
-                <button className="button" onClick={handleLogin}>
-          Loguearse
-        </button>
+          <button
+            className={`${styles.button} ${styles["button-secondary"]}`}
+            onClick={handleLogin}
+          >
+            Loguearse
+          </button>
         </div>
       </div>
     </div>
