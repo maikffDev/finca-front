@@ -2,7 +2,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import PagoPage from '../pages/pago/PagoPage';
 import Login from '../components/Auth/Login/Login';
 import Register from '../components/Auth/Register/Register';
-import Home from '../components/Home/Home';
+import Home from '../pages/home/Home';
+
 
 
 const routes = [
