@@ -3,8 +3,7 @@ import PagoPage from '../pages/pago/PagoPage';
 import Login from '../components/Auth/Login/Login';
 import Register from '../components/Auth/Register/Register';
 import Home from '../pages/home/Home';
-
-
+import PagoExitoso from '../pages/pago/PagoExitoso';
 
 const routes = [
  {
@@ -28,12 +27,11 @@ const routes = [
   {
   path: "/home",
   element: <Home/>,
- }
-
- /*{
-   path: "/pago",
-   element: <PagoPage/>,
- }*/
+ },
+ {
+    path: "/pago-exitoso",
+    element: <PagoExitoso />,
+  }
 ];
 
 const router = createBrowserRouter(routes);
