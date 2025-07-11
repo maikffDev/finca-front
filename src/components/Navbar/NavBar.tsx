@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, ChangeEvent, KeyboardEvent } from "react";
 import styles from "./Navbar.module.css";
 
