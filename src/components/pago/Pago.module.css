@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 3a92ff8 (Feat: Se añadio la vista de Pago exitoso y demas funcionalidades de Pago)
 .pageContainer {
  
   background-color: #1e3a5f;
@@ -137,8 +132,6 @@
 .botonReservar:hover {
   background-color: #ea580c;
 }
-<<<<<<< HEAD
-=======
 
 .modalOverlay {
   position: fixed;
@@ -222,4 +215,3 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
->>>>>>> 3a92ff8 (Feat: Se añadio la vista de Pago exitoso y demas funcionalidades de Pago)
