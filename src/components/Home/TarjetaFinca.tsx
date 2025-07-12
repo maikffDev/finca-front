@@ -1,6 +1,6 @@
 import { MoreHorizontal, Droplet, Settings, FileText } from "lucide-react";
 import styles from "./home.module.css";
-import { IFinca, IFincaResponse } from "../../types/finca";
+import { IFinca } from "../../types/finca";
 import VerMasButton from "./Button/VerMasButton ";
 
 interface Props {
@@ -10,8 +10,11 @@ interface Props {
 const TarjetaFinca: React.FC<Props> = ({ finca }) => {
   const { name, location, pricePerHour, imagesUrls } = finca;
 
+  const cover = imagesUrls[0] ?? "https://via.placeholder.com/400x250?text=Sin+imagen";
+
   return (
     <div className={styles.card}>
+      {/* Header con título y ubicación */}
       <div className={styles.cardHeader}>
         <div className={styles.cardHeaderContent}>
           <div className={styles.cardHeaderText}>
@@ -27,16 +30,15 @@ const TarjetaFinca: React.FC<Props> = ({ finca }) => {
         </button>
       </div>
 
-      <div className={styles.cardIcons}>
-        <Droplet size={32} className={styles.icon} />
-        <Settings size={32} className={styles.icon} />
-        <FileText size={32} className={styles.icon} />
-      </div>
+      {/* Imagen */}
+      <img src={cover} alt={`Imagen de ${name}`} className={styles.cardImage} />
 
+    
+      {/* Precio + info */}
       <div className={styles.cardContent}>
         <h4 className={styles.cardTitle}>${pricePerHour} / hora</h4>
         <p className={styles.cardSubtitle}>
-          {imagesUrls.length > 0 ? "Imágenes disponibles" : "Sin imágenes"}
+          
         </p>
       </div>
 
@@ -45,4 +47,19 @@ const TarjetaFinca: React.FC<Props> = ({ finca }) => {
   );
 };
 
+
+
 export default TarjetaFinca;
+
+
+
+/*
+
+      <div className={styles.cardIcons}>
+        <Droplet size={32} className={styles.icon} />
+        <Settings size={32} className={styles.icon} />
+        <FileText size={32} className={styles.icon} />
+      </div>
+
+
+*/ 

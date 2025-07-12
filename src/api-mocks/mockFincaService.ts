@@ -8,8 +8,7 @@ const fincasMock: IFinca[] = [
     pricePerHour: "1500",
     active: true,
     imagesUrls: [
-      "https://example.com/finca-olivos-1.jpg",
-      "https://example.com/finca-olivos-2.jpg"
+      "https://ucarecdn.com/6d2901b5-633f-45ac-9e12-d7e21d06a7c2/-/preview/"
     ]
   },
   {
@@ -19,7 +18,7 @@ const fincasMock: IFinca[] = [
     pricePerHour: "1200",
     active: true,
     imagesUrls: [
-      "https://example.com/finca-amanecer.jpg"
+      "https://www.sublimespain.com/wp-content/uploads/Finca-in-Spain.jpg"
     ]
   },
   {
@@ -28,7 +27,9 @@ const fincasMock: IFinca[] = [
     location: "San Luis",
     pricePerHour: "1350",
     active: false,
-    imagesUrls: []
+    imagesUrls: [
+      "https://www.fincasquindio.com.co/wp-content/uploads/2022/02/finca_tipica_quindio.jpg"
+    ]
   }
 ];
 
