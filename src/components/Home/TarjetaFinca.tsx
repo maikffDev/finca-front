@@ -1,9 +1,9 @@
 import { MoreHorizontal, Droplet, Settings, FileText } from "lucide-react";
 import styles from "./home.module.css";
-import { IFincaResponse } from "../../types/finca";
+import { IFinca, IFincaResponse } from "../../types/finca";
 
 interface Props {
-  finca: IFincaResponse;
+  finca: IFinca;
 }
 
 const TarjetaFinca: React.FC<Props> = ({ finca }) => {

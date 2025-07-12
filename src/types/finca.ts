@@ -4,6 +4,7 @@ export interface IFinca {
   location: string;
   pricePerHour: string;
   active: boolean;
+  imagesUrls:string[];
 }
 
 export interface IFincaResponse {
