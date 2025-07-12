@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../Button";
+import Button from "../../Button/Button";
 import styles from "./Reserva.module.css";
 
 interface Props {
@@ -23,6 +23,10 @@ export const Reserva = ({ precio, scheduleIni, scheduleEnd }: Props) => (
       </div>
     </div>
 
-    <Button label="Reservar" className={styles.boton} route="/pago" />
+    {/* Envolvemos el botón para aplicarle el estilo */}
+    <div className={styles.boton}>
+      <Button label="Reservar" route="/pago" />
+    </div>
   </section>
 );
+

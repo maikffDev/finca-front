@@ -11,7 +11,7 @@
 }
 
 .precio {
-    text-align: center;
+  text-align: center;
   font-size: 1.75rem;
   font-weight: bold;
   color: #15803d;
@@ -30,6 +30,8 @@
   color: #374151;
 }
 
+/* Aplicamos el estilo a un contenedor del botón */
 .boton {
   width: 100%;
 }
+

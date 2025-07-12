@@ -3,6 +3,7 @@ import PagoPage from '../pages/pago/PagoPage';
 import Login from '../components/Auth/Login/Login';
 import Register from '../components/Auth/Register/Register';
 import Home from '../pages/home/Home';
+import FincaDetalle from '../pages/detalles/detail';
 
 
 
@@ -28,6 +29,10 @@ const routes = [
   {
   path: "/home",
   element: <Home/>,
+ },
+  {
+  path: "/fincadetalles",
+  element: <FincaDetalle/>,
  }
 
  /*{

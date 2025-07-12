@@ -1,7 +1,4 @@
-:root{
-    margin: 0 5rem;
-    padding: 2rem;
-}
+/*TODO , ojo con merter styles globales dentro de un module. no va*/
 .container {
   display: flex;
   justify-content: center;
