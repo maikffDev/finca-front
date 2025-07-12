@@ -1,6 +1,7 @@
 import { MoreHorizontal, Droplet, Settings, FileText } from "lucide-react";
 import styles from "./home.module.css";
 import { IFinca, IFincaResponse } from "../../types/finca";
+import VerMasButton from "./Button/VerMasButton ";
 
 interface Props {
   finca: IFinca;
@@ -39,7 +40,7 @@ const TarjetaFinca: React.FC<Props> = ({ finca }) => {
         </p>
       </div>
 
-      <button className={styles.seeMoreButton}>Ver más</button>
+      <VerMasButton to="/fincadetalles" />
     </div>
   );
 };
