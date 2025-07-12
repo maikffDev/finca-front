@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import Header from "../../components/Header/header";
 import BarraDeNavegacion from "../../components/Navbar/NavBar";
 import ListaDeFincas from "../../components/Home/ListaDeFincas";
-import { useFincaContext } from "../../context/fincaContext";
 import LoadingContent from "../../components/Loading/LoadingContent";
+import { useFincaContext } from "../../api-mocks/mockFincaContext"; // aca solo deberiamos cambiar el import al context cuando este el backend y listo todo solucionado, esto ya anda
+
 
 
 const Home: React.FC = () => {
