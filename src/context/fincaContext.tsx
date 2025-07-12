@@ -23,6 +23,7 @@ const FincaContext = createContext<FincaContextType | undefined>(undefined);
 export const FincaProvider = ({ children }: { children: ReactNode }) => {
   const [finca, setFinca] = useState<IFinca | null>(null);
   const [fincas, setFincas] = useState<IFinca[]>([]);
+  
 
   useEffect(() => {
     fetchAllFincas();
