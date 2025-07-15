@@ -1,0 +1,23 @@
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #3b82f6; /* azul suave */
+  color: #1e3a8a;             /* azul oscuro */
+  border-radius: 8px;
+  background-color: #f0f9ff;
+  font-weight: 500;
+  cursor: default;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tag:hover {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
