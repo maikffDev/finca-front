@@ -5,6 +5,7 @@ import Register from '../components/Auth/Register/Register';
 import Home from '../pages/home/Home';
 import FincaDetalle from '../pages/detalles/detail';
 import PagoExitoso from '../pages/pago/PagoExitoso';
+import UserProfilePage from '../components/UserProfile/UserProfileReservations';
 
 
 const routes = [
@@ -37,7 +38,12 @@ const routes = [
   {
     path: "/pago-exitoso",
     element: <PagoExitoso />,
+  },
+  {
+    path: "/reservas",
+    element: <UserProfilePage />,
   }
+
 
  /*{
    path: "/pago",

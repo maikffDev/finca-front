@@ -10,9 +10,11 @@ import {
   Box,
   Container,
 } from "@mui/material"
-import { Search, Person, MoreVert } from "@mui/icons-material"
 
-interface ActiveReservation {
+import { Search, Person, MoreVert } from "@mui/icons-material"
+import img from "../../assets/fotoFincas.jpg"
+
+  interface ActiveReservation {
   id: string
   price: number
   propertyName: string
@@ -63,7 +65,7 @@ const previousReservations: PreviousReservation[] = [
     location: "Ubicación",
     price: "PRECIO",
     description: "Descripción",
-    image: "/placeholder.svg?height=200&width=300",
+    image: img,
     avatar: "/placeholder-user.jpg",
     avatarLetter: "A",
   },
@@ -73,7 +75,7 @@ const previousReservations: PreviousReservation[] = [
     location: "Ubicación",
     price: "PRECIO",
     description: "Descripción",
-    image: "/placeholder.svg?height=200&width=300",
+    image: img,
     avatar: "/placeholder-user.jpg",
     avatarLetter: "A",
   },
@@ -83,7 +85,7 @@ const previousReservations: PreviousReservation[] = [
     location: "Ubicación",
     price: "PRECIO",
     description: "Descripción",
-    image: "/placeholder.svg?height=200&width=300",
+    image: img,
     avatar: "/placeholder-user.jpg",
     avatarLetter: "A",
   },
@@ -96,7 +98,7 @@ export default function UserProfilePage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-700">
+    <div className="bg-[#173753] min-h-screen" style={{ overflowY: "auto" }}>
      
       <Box className="bg-slate-700 px-6 py-4">
         <Container maxWidth="xl">
@@ -252,7 +254,7 @@ export default function UserProfilePage() {
                   </Box>
 
                   <Box className="p-0">
-                    <div className="relative">
+                    <div className="relative p-4">
                       <img
                         src={reservation.image || "/placeholder.svg"}
                         alt={reservation.propertyName}
@@ -287,7 +289,7 @@ export default function UserProfilePage() {
                           paddingY: "8px",
                         }}
                       >
-                        información
+                        Información
                       </Button>
                     </Box>
                   </Box>

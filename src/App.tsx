@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { BASE_API_URL } from "./api/api";
 import NavBar from "./components/Navbar/NavBar";
+import { UserProvider } from "./context/userContext";
+import { FincaProvider } from "./context/fincaContext";
+import RouterConfig from "./router/RouterConfig"; // <-- FALTA ESTE IMPORT
 
 function App() {
   const [data, setData] = useState<any[]>([]);
@@ -13,9 +16,11 @@ function App() {
 
   return (
     <div>
-      <NavBar />
-      <h1>Datos desde Spring Boot</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <UserProvider>
+      <FincaProvider>
+      <RouterConfig />
+      </FincaProvider>
+      </UserProvider>
     </div>
   );
 };
