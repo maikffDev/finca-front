@@ -1,0 +1,135 @@
+/* Contenedor general de la sección */
+.cardsSection {
+  padding: 2rem;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tarjeta */
+.card {
+  background-color: #d4d4d4;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-height: 400px;
+}
+
+.cardImage {
+  width: 100%;
+  height: 180px;       
+  object-fit: cover;   
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cardHeaderContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.cardHeaderText {
+  flex: 1;
+}
+
+.cardHeaderTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: #333;
+}
+
+.cardHeaderSubtitle {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+}
+
+.cardAvatar {
+  width: 32px;
+  height: 32px;
+  background-color: #b19cd9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  padding: 0.25rem;
+}
+
+.cardIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  flex: 1;
+}
+
+.icon {
+  color: #999;
+}
+
+.cardContent {
+  text-align: left;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: #333;
+}
+
+.cardSubtitle {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+}
+
+.seeMoreButton {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background-color 0.2s;
+}
+
+.seeMoreButton:hover {
+  background-color: #e64a19;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

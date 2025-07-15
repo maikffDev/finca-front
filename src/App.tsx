@@ -1,23 +1,19 @@
-import { useEffect, useState } from "react";
-import { api } from "./api";
-import NavBar from "./layouts/Nav";
+import "./App.css";
+import { FincaProvider } from "./context/fincaContext";
+import { UserProvider } from "./context/userContext";
 
-function App() {
-  const [data, setData] = useState<any[]>([]);
+import RouterConfig from "./router/RouterConfig";
 
-  useEffect(() => {
-    api.get("/api/finca") //
-      .then((res) => setData(res.data))
-      .catch((err) => console.error(err));
-  }, []);
-
+const App: React.FC = () => {
   return (
-    <div>
-      <NavBar />
-      <h1>Datos desde Spring Boot</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+    <div className="App">
+      <UserProvider>
+      <FincaProvider>
+      <RouterConfig />
+      </FincaProvider>
+      </UserProvider>
     </div>
   );
-}
+};
 
 export default App;

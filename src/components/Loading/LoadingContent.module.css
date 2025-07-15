@@ -1,0 +1,51 @@
+/* LoadingPage.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 120px); /* ajustar según header+nav */
+  gap: 1.5rem;
+  background-color: #f3f4f6; /* gris muy claro para contraste */
+  color: #2c3e50; /* azul oscuro opaco */
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  user-select: none;
+}
+
+.spinner {
+  border: 6px solid #d1d5db; /* gris claro */
+  border-top: 6px solid #34495e; /* azul oscuro opaco */
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  animation: spin 1.2s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(52, 73, 94, 0.6);
+}
+
+.message {
+  margin: 0;
+  text-align: center;
+  color: #34495e; /* azul oscuro */
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Animación para girar */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
