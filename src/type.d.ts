@@ -1,0 +1,1 @@
+/* separen mejor en la carpeta types las interafaces por entidades, ya que si son muchas aca va a quedar un choclo, miren el ejemplo que deje para guiarse de user en "src/types/user.ts"*/ 
