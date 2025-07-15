@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { api } from "./api";
-import NavBar from "./layouts/Nav";
+import { BASE_API_URL } from "./api/api";
+import NavBar from "./components/Navbar/NavBar";
 
 function App() {
   const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
-    api.get("/api/finca") //
+    BASE_API_URL.get("/api/finca") //
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, []);
