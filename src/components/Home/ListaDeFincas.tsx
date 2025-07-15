@@ -1,10 +1,13 @@
-import type{ IFincaResponse } from "../../types/finca";
+
+
+import type { IFinca, IFincaResponse } from "../../types/finca";
+
 import styles from "./home.module.css";
 import TarjetaFinca from "./TarjetaFinca";
 
 
 interface Props {
-  fincas: IFincaResponse[];
+  fincas: IFinca[];
 }
 
 const ListaDeFincas: React.FC<Props> = ({ fincas }) => {
